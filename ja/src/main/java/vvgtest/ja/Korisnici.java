@@ -9,20 +9,16 @@ public class Korisnici implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "KorisnikID")
+   @org.kie.api.definition.type.Label("KorisnikID")
    private java.lang.Long id_korisnika;
-   @org.kie.api.definition.type.Label(value = "Ime")
+   @org.kie.api.definition.type.Label("Ime")
    private java.lang.String ime_korisnik;
-   @org.kie.api.definition.type.Label(value = "Prezime")
+   @org.kie.api.definition.type.Label("Prezime")
    private java.lang.String prezime_korisnika;
-   @org.kie.api.definition.type.Label(value = "Korisnicko ime")
+   @org.kie.api.definition.type.Label("Korisnicko ime")
    private java.lang.String korisnicko_ime;
-   @org.kie.api.definition.type.Label(value = "Lozinka")
+   @org.kie.api.definition.type.Label("Lozinka")
    private java.lang.String lozinka;
-   @org.kie.api.definition.type.Label(value = "e-mail adresa")
-   private java.lang.String mail;
-   @org.kie.api.definition.type.Label(value = "Ovlast korisnika")
-   private java.lang.Long id_ovlast;
 
    public Korisnici()
    {
@@ -78,38 +74,15 @@ public class Korisnici implements java.io.Serializable
       this.lozinka = lozinka;
    }
 
-   public java.lang.String getMail()
-   {
-      return this.mail;
-   }
-
-   public void setMail(java.lang.String mail)
-   {
-      this.mail = mail;
-   }
-
-   public java.lang.Long getId_ovlast()
-   {
-      return this.id_ovlast;
-   }
-
-   public void setId_ovlast(java.lang.Long id_ovlast)
-   {
-      this.id_ovlast = id_ovlast;
-   }
-
-   public Korisnici(java.lang.Long id_korisnika,
-         java.lang.String ime_korisnik, java.lang.String prezime_korisnika,
-         java.lang.String korisnicko_ime, java.lang.String lozinka,
-         java.lang.String mail, java.lang.Long id_ovlast)
+   public Korisnici(java.lang.Long id_korisnika, java.lang.String ime_korisnik,
+         java.lang.String prezime_korisnika, java.lang.String korisnicko_ime,
+         java.lang.String lozinka)
    {
       this.id_korisnika = id_korisnika;
       this.ime_korisnik = ime_korisnik;
       this.prezime_korisnika = prezime_korisnika;
       this.korisnicko_ime = korisnicko_ime;
       this.lozinka = lozinka;
-      this.mail = mail;
-      this.id_ovlast = id_ovlast;
    }
 
 }
