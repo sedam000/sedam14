@@ -16,8 +16,14 @@ public class Zahtjevi implements java.io.Serializable
    @org.kie.api.definition.type.Label("Kratki opis zahtjeva")
    private java.lang.String opis_zahtjeva;
 
-   @org.kie.api.definition.type.Label("Status zahtjeva")
-   private String status_zahtjeva;
+   @org.kie.api.definition.type.Label(value = "Status zahtjeva")
+   private java.lang.String id_statusa;
+
+   @org.kie.api.definition.type.Label(value = "Poslovni Centar")
+   private java.lang.String poslovniCentarID;
+
+   @org.kie.api.definition.type.Label(value = "Opis poslovnih pravila")
+   private java.lang.String korisnicka_specifikacija;
 
    public Zahtjevi()
    {
@@ -53,23 +59,48 @@ public class Zahtjevi implements java.io.Serializable
       this.opis_zahtjeva = opis_zahtjeva;
    }
 
-   public java.lang.String getStatus_zahtjeva()
+   public java.lang.String getId_statusa()
    {
-      return this.status_zahtjeva;
+      return this.id_statusa;
    }
 
-   public void setStatus_zahtjeva(java.lang.String status_zahtjeva)
+   public void setId_statusa(java.lang.String id_statusa)
    {
-      this.status_zahtjeva = status_zahtjeva;
+      this.id_statusa = id_statusa;
+   }
+
+   public java.lang.String getPoslovniCentarID()
+   {
+      return this.poslovniCentarID;
+   }
+
+   public void setPoslovniCentarID(java.lang.String poslovniCentarID)
+   {
+      this.poslovniCentarID = poslovniCentarID;
+   }
+
+   public java.lang.String getKorisnicka_specifikacija()
+   {
+      return this.korisnicka_specifikacija;
+   }
+
+   public void setKorisnicka_specifikacija(
+         java.lang.String korisnicka_specifikacija)
+   {
+      this.korisnicka_specifikacija = korisnicka_specifikacija;
    }
 
    public Zahtjevi(java.lang.Long id_zahtjeva, java.lang.String naziv_zahtjeva,
-         java.lang.String opis_zahtjeva, java.lang.String status_zahtjeva)
+         java.lang.String opis_zahtjeva, java.lang.String id_statusa,
+         java.lang.String poslovniCentarID,
+         java.lang.String korisnicka_specifikacija)
    {
       this.id_zahtjeva = id_zahtjeva;
       this.naziv_zahtjeva = naziv_zahtjeva;
       this.opis_zahtjeva = opis_zahtjeva;
-      this.status_zahtjeva = status_zahtjeva;
+      this.id_statusa = id_statusa;
+      this.poslovniCentarID = poslovniCentarID;
+      this.korisnicka_specifikacija = korisnicka_specifikacija;
    }
 
 }
