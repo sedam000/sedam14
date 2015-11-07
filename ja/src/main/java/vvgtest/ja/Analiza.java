@@ -9,12 +9,24 @@ public class Analiza implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "AnalizaID")
+   @org.kie.api.definition.type.Label("AnalizaID")
    private java.lang.Long id_analize;
-   @org.kie.api.definition.type.Label(value = "ZahtjevID")
+   @org.kie.api.definition.type.Label("ZahtjevID")
    private java.lang.Long id_zahtejva;
-   @org.kie.api.definition.type.Label(value = "Narucitelj")
+   @org.kie.api.definition.type.Label("Narucitelj")
    private java.lang.String naruciteljID;
+
+   @org.kie.api.definition.type.Label(value = "Korisnik")
+   private java.lang.Long idKorisnika;
+
+   @org.kie.api.definition.type.Label(value = "OznakaUC")
+   private java.lang.String oznaka_UC;
+
+   @org.kie.api.definition.type.Label(value = "naziv UC")
+   private java.lang.String naziv_UC;
+
+   @org.kie.api.definition.type.Label(value = "opisivanje poslovnih pravila")
+   private java.lang.String opis_uc;
 
    public Analiza()
    {
@@ -50,12 +62,58 @@ public class Analiza implements java.io.Serializable
       this.naruciteljID = naruciteljID;
    }
 
+   public java.lang.Long getIdKorisnika()
+   {
+      return this.idKorisnika;
+   }
+
+   public void setIdKorisnika(java.lang.Long idKorisnika)
+   {
+      this.idKorisnika = idKorisnika;
+   }
+
+   public java.lang.String getOznaka_UC()
+   {
+      return this.oznaka_UC;
+   }
+
+   public void setOznaka_UC(java.lang.String oznaka_UC)
+   {
+      this.oznaka_UC = oznaka_UC;
+   }
+
+   public java.lang.String getNaziv_UC()
+   {
+      return this.naziv_UC;
+   }
+
+   public void setNaziv_UC(java.lang.String naziv_UC)
+   {
+      this.naziv_UC = naziv_UC;
+   }
+
+   public java.lang.String getOpis_uc()
+   {
+      return this.opis_uc;
+   }
+
+   public void setOpis_uc(java.lang.String opis_uc)
+   {
+      this.opis_uc = opis_uc;
+   }
+
    public Analiza(java.lang.Long id_analize, java.lang.Long id_zahtejva,
-         java.lang.String naruciteljID)
+         java.lang.String naruciteljID, java.lang.Long idKorisnika,
+         java.lang.String oznaka_UC, java.lang.String naziv_UC,
+         java.lang.String opis_uc)
    {
       this.id_analize = id_analize;
       this.id_zahtejva = id_zahtejva;
       this.naruciteljID = naruciteljID;
+      this.idKorisnika = idKorisnika;
+      this.oznaka_UC = oznaka_UC;
+      this.naziv_UC = naziv_UC;
+      this.opis_uc = opis_uc;
    }
 
 }
