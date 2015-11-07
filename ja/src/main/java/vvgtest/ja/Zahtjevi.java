@@ -16,8 +16,8 @@ public class Zahtjevi implements java.io.Serializable
    @org.kie.api.definition.type.Label("Kratki opis zahtjeva")
    private java.lang.String opis_zahtjeva;
 
-   @org.kie.api.definition.type.Label(value = "Status zahtjeva")
-   private java.lang.Long status_zahtjeva;
+   @org.kie.api.definition.type.Label("Status zahtjeva")
+   private String status_zahtjeva;
 
    public Zahtjevi()
    {
@@ -53,18 +53,18 @@ public class Zahtjevi implements java.io.Serializable
       this.opis_zahtjeva = opis_zahtjeva;
    }
 
-   public java.lang.Long getStatus_zahtjeva()
+   public java.lang.String getStatus_zahtjeva()
    {
       return this.status_zahtjeva;
    }
 
-   public void setStatus_zahtjeva(java.lang.Long status_zahtjeva)
+   public void setStatus_zahtjeva(java.lang.String status_zahtjeva)
    {
       this.status_zahtjeva = status_zahtjeva;
    }
 
    public Zahtjevi(java.lang.Long id_zahtjeva, java.lang.String naziv_zahtjeva,
-         java.lang.String opis_zahtjeva, java.lang.Long status_zahtjeva)
+         java.lang.String opis_zahtjeva, java.lang.String status_zahtjeva)
    {
       this.id_zahtjeva = id_zahtjeva;
       this.naziv_zahtjeva = naziv_zahtjeva;
