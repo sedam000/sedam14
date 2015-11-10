@@ -9,20 +9,26 @@ public class Testne_sripte implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "TestnaSkriptaID")
+   @org.kie.api.definition.type.Label("TestnaSkriptaID")
    private java.lang.Long id_testne_skripte;
-   @org.kie.api.definition.type.Label(value = "Testnikorak")
+   @org.kie.api.definition.type.Label("Testnikorak")
    private java.lang.Long testni_korak;
-   @org.kie.api.definition.type.Label(value = "Opis testnog koraka")
+   @org.kie.api.definition.type.Label("Opis testnog koraka")
    private java.lang.String opis_testnog_koraka;
-   @org.kie.api.definition.type.Label(value = "Rezultat testnog koraka")
+   @org.kie.api.definition.type.Label("Rezultat testnog koraka")
    private java.lang.String rezultat_testnog_koraka;
-   @org.kie.api.definition.type.Label(value = "Status ispravnosti testnoh koraka")
+   @org.kie.api.definition.type.Label("Status ispravnosti testnoh koraka")
    private java.lang.String sts_ispravnosti;
-   @org.kie.api.definition.type.Label(value = "ZahtjevID")
+   @org.kie.api.definition.type.Label("ZahtjevID")
    private java.lang.Long id_zahtjeva;
-   @org.kie.api.definition.type.Label(value = "AnalizaID")
-   private java.lang.Long ID_analize;
+   @org.kie.api.definition.type.Label(value = "naruciteljID")
+   private java.lang.String narucitelj;
+
+   @org.kie.api.definition.type.Label(value = "analizaID")
+   private java.lang.Long id_analize;
+
+   @org.kie.api.definition.type.Label(value = "korisnik")
+   private java.lang.Long id_korisnika;
 
    public Testne_sripte()
    {
@@ -89,21 +95,42 @@ public class Testne_sripte implements java.io.Serializable
       this.id_zahtjeva = id_zahtjeva;
    }
 
-   public java.lang.Long getID_analize()
+   public java.lang.String getNarucitelj()
    {
-      return this.ID_analize;
+      return this.narucitelj;
    }
 
-   public void setID_analize(java.lang.Long ID_analize)
+   public void setNarucitelj(java.lang.String narucitelj)
    {
-      this.ID_analize = ID_analize;
+      this.narucitelj = narucitelj;
+   }
+
+   public java.lang.Long getId_analize()
+   {
+      return this.id_analize;
+   }
+
+   public void setId_analize(java.lang.Long id_analize)
+   {
+      this.id_analize = id_analize;
+   }
+
+   public java.lang.Long getId_korisnika()
+   {
+      return this.id_korisnika;
+   }
+
+   public void setId_korisnika(java.lang.Long id_korisnika)
+   {
+      this.id_korisnika = id_korisnika;
    }
 
    public Testne_sripte(java.lang.Long id_testne_skripte,
          java.lang.Long testni_korak, java.lang.String opis_testnog_koraka,
          java.lang.String rezultat_testnog_koraka,
          java.lang.String sts_ispravnosti, java.lang.Long id_zahtjeva,
-         java.lang.Long ID_analize)
+         java.lang.String narucitelj, java.lang.Long id_analize,
+         java.lang.Long id_korisnika)
    {
       this.id_testne_skripte = id_testne_skripte;
       this.testni_korak = testni_korak;
@@ -111,7 +138,9 @@ public class Testne_sripte implements java.io.Serializable
       this.rezultat_testnog_koraka = rezultat_testnog_koraka;
       this.sts_ispravnosti = sts_ispravnosti;
       this.id_zahtjeva = id_zahtjeva;
-      this.ID_analize = ID_analize;
+      this.narucitelj = narucitelj;
+      this.id_analize = id_analize;
+      this.id_korisnika = id_korisnika;
    }
 
 }
