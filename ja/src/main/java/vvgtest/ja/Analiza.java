@@ -11,12 +11,6 @@ public class Analiza implements java.io.Serializable
 
    @org.kie.api.definition.type.Label("AnalizaID")
    private java.lang.Long id_analize;
-   @org.kie.api.definition.type.Label("Narucitelj")
-   private java.lang.String naruciteljID;
-
-   @org.kie.api.definition.type.Label("Korisnik")
-   private java.lang.Long idKorisnika;
-
    @org.kie.api.definition.type.Label("OznakaUC")
    private java.lang.String oznaka_UC;
 
@@ -26,8 +20,14 @@ public class Analiza implements java.io.Serializable
    @org.kie.api.definition.type.Label("opisivanje poslovnih pravila")
    private java.lang.String opis_uc;
 
-   @org.kie.api.definition.type.Label(value = "ZahtjevID")
+   @org.kie.api.definition.type.Label("ZahtjevID")
    private java.lang.Long id_zahtjeva;
+
+   @org.kie.api.definition.type.Label(value = "Narucitelj")
+   private java.lang.String narucitelj;
+
+   @org.kie.api.definition.type.Label(value = "Korisnik koji unosi podatke")
+   private java.lang.Long id_korisnika;
 
    public Analiza()
    {
@@ -41,26 +41,6 @@ public class Analiza implements java.io.Serializable
    public void setId_analize(java.lang.Long id_analize)
    {
       this.id_analize = id_analize;
-   }
-
-   public java.lang.String getNaruciteljID()
-   {
-      return this.naruciteljID;
-   }
-
-   public void setNaruciteljID(java.lang.String naruciteljID)
-   {
-      this.naruciteljID = naruciteljID;
-   }
-
-   public java.lang.Long getIdKorisnika()
-   {
-      return this.idKorisnika;
-   }
-
-   public void setIdKorisnika(java.lang.Long idKorisnika)
-   {
-      this.idKorisnika = idKorisnika;
    }
 
    public java.lang.String getOznaka_UC()
@@ -103,18 +83,38 @@ public class Analiza implements java.io.Serializable
       this.id_zahtjeva = id_zahtjeva;
    }
 
-   public Analiza(java.lang.Long id_analize, java.lang.String naruciteljID,
-         java.lang.Long idKorisnika, java.lang.String oznaka_UC,
+   public java.lang.String getNarucitelj()
+   {
+      return this.narucitelj;
+   }
+
+   public void setNarucitelj(java.lang.String narucitelj)
+   {
+      this.narucitelj = narucitelj;
+   }
+
+   public java.lang.Long getId_korisnika()
+   {
+      return this.id_korisnika;
+   }
+
+   public void setId_korisnika(java.lang.Long id_korisnika)
+   {
+      this.id_korisnika = id_korisnika;
+   }
+
+   public Analiza(java.lang.Long id_analize, java.lang.String oznaka_UC,
          java.lang.String naziv_UC, java.lang.String opis_uc,
-         java.lang.Long id_zahtjeva)
+         java.lang.Long id_zahtjeva, java.lang.String narucitelj,
+         java.lang.Long id_korisnika)
    {
       this.id_analize = id_analize;
-      this.naruciteljID = naruciteljID;
-      this.idKorisnika = idKorisnika;
       this.oznaka_UC = oznaka_UC;
       this.naziv_UC = naziv_UC;
       this.opis_uc = opis_uc;
       this.id_zahtjeva = id_zahtjeva;
+      this.narucitelj = narucitelj;
+      this.id_korisnika = id_korisnika;
    }
 
 }
