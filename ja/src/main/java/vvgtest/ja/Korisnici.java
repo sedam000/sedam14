@@ -20,6 +20,12 @@ public class Korisnici implements java.io.Serializable
    @org.kie.api.definition.type.Label("Lozinka")
    private java.lang.String lozinka;
 
+   @org.kie.api.definition.type.Label(value = "mail adresa korisnika")
+   private java.lang.Long mail_adresa;
+
+   @org.kie.api.definition.type.Label(value = "ovlast_korisnika")
+   private java.lang.String id_ovlasti;
+
    public Korisnici()
    {
    }
@@ -74,15 +80,38 @@ public class Korisnici implements java.io.Serializable
       this.lozinka = lozinka;
    }
 
+   public java.lang.Long getMail_adresa()
+   {
+      return this.mail_adresa;
+   }
+
+   public void setMail_adresa(java.lang.Long mail_adresa)
+   {
+      this.mail_adresa = mail_adresa;
+   }
+
+   public java.lang.String getId_ovlasti()
+   {
+      return this.id_ovlasti;
+   }
+
+   public void setId_ovlasti(java.lang.String id_ovlasti)
+   {
+      this.id_ovlasti = id_ovlasti;
+   }
+
    public Korisnici(java.lang.Long id_korisnika, java.lang.String ime_korisnik,
          java.lang.String prezime_korisnika, java.lang.String korisnicko_ime,
-         java.lang.String lozinka)
+         java.lang.String lozinka, java.lang.Long mail_adresa,
+         java.lang.String id_ovlasti)
    {
       this.id_korisnika = id_korisnika;
       this.ime_korisnik = ime_korisnik;
       this.prezime_korisnika = prezime_korisnika;
       this.korisnicko_ime = korisnicko_ime;
       this.lozinka = lozinka;
+      this.mail_adresa = mail_adresa;
+      this.id_ovlasti = id_ovlasti;
    }
 
 }
