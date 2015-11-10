@@ -9,8 +9,66 @@ public class Isporuka_u_test implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
+   @org.kie.api.definition.type.Label(value = "IsporukaTestID")
+   private java.lang.Long id_isporuke_test;
+   @org.kie.api.definition.type.Label(value = "naziv")
+   private java.lang.String naziv;
+   @org.kie.api.definition.type.Label(value = "verzija_aplikacije")
+   private java.lang.String verzija;
+   @org.kie.api.definition.type.Label(value = "opisPromjena")
+   private java.lang.String opis_promjena;
+
    public Isporuka_u_test()
    {
+   }
+
+   public java.lang.Long getId_isporuke_test()
+   {
+      return this.id_isporuke_test;
+   }
+
+   public void setId_isporuke_test(java.lang.Long id_isporuke_test)
+   {
+      this.id_isporuke_test = id_isporuke_test;
+   }
+
+   public java.lang.String getNaziv()
+   {
+      return this.naziv;
+   }
+
+   public void setNaziv(java.lang.String naziv)
+   {
+      this.naziv = naziv;
+   }
+
+   public java.lang.String getVerzija()
+   {
+      return this.verzija;
+   }
+
+   public void setVerzija(java.lang.String verzija)
+   {
+      this.verzija = verzija;
+   }
+
+   public java.lang.String getOpis_promjena()
+   {
+      return this.opis_promjena;
+   }
+
+   public void setOpis_promjena(java.lang.String opis_promjena)
+   {
+      this.opis_promjena = opis_promjena;
+   }
+
+   public Isporuka_u_test(java.lang.Long id_isporuke_test, java.lang.String naziv,
+         java.lang.String verzija, java.lang.String opis_promjena)
+   {
+      this.id_isporuke_test = id_isporuke_test;
+      this.naziv = naziv;
+      this.verzija = verzija;
+      this.opis_promjena = opis_promjena;
    }
 
 }
