@@ -9,18 +9,19 @@ public class Statusi implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "StatusID")
+   @org.kie.api.definition.type.Label("StatusID")
    private java.lang.Long id_statusa;
-   @org.kie.api.definition.type.Label(value = "U obradi")
+   @org.kie.api.definition.type.Label("U obradi")
    private java.lang.String programiranje;
-   @org.kie.api.definition.type.Label(value = "U programiranju")
+   @org.kie.api.definition.type.Label("U programiranju")
    private java.lang.String obrada;
-   @org.kie.api.definition.type.Label(value = "U testiranju")
+   @org.kie.api.definition.type.Label("U testiranju")
    private java.lang.String u_testiranju;
-   @org.kie.api.definition.type.Label(value = "Produkcija")
-   private java.lang.String testiranje;
-   @org.kie.api.definition.type.Label(value = "U analizi")
+   @org.kie.api.definition.type.Label("U analizi")
    private java.lang.String analiza;
+
+   @org.kie.api.definition.type.Label(value = "Produkcija")
+   private java.lang.String produkcija;
 
    public Statusi()
    {
@@ -66,16 +67,6 @@ public class Statusi implements java.io.Serializable
       this.u_testiranju = u_testiranju;
    }
 
-   public java.lang.String getTestiranje()
-   {
-      return this.testiranje;
-   }
-
-   public void setTestiranje(java.lang.String testiranje)
-   {
-      this.testiranje = testiranje;
-   }
-
    public java.lang.String getAnaliza()
    {
       return this.analiza;
@@ -86,16 +77,26 @@ public class Statusi implements java.io.Serializable
       this.analiza = analiza;
    }
 
+   public java.lang.String getProdukcija()
+   {
+      return this.produkcija;
+   }
+
+   public void setProdukcija(java.lang.String produkcija)
+   {
+      this.produkcija = produkcija;
+   }
+
    public Statusi(java.lang.Long id_statusa, java.lang.String programiranje,
          java.lang.String obrada, java.lang.String u_testiranju,
-         java.lang.String testiranje, java.lang.String analiza)
+         java.lang.String analiza, java.lang.String produkcija)
    {
       this.id_statusa = id_statusa;
       this.programiranje = programiranje;
       this.obrada = obrada;
       this.u_testiranju = u_testiranju;
-      this.testiranje = testiranje;
       this.analiza = analiza;
+      this.produkcija = produkcija;
    }
 
 }
