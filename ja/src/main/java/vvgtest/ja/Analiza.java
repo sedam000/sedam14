@@ -21,13 +21,13 @@ public class Analiza implements java.io.Serializable
    private java.lang.String opis_uc;
 
    @org.kie.api.definition.type.Label("ZahtjevID")
-   private java.lang.Long id_zahtjeva;
+   private Analiza id_zahtjeva;
 
-   @org.kie.api.definition.type.Label(value = "Narucitelj")
+   @org.kie.api.definition.type.Label("Narucitelj")
    private java.lang.String narucitelj;
 
-   @org.kie.api.definition.type.Label(value = "Korisnik koji unosi podatke")
-   private java.lang.Long id_korisnika;
+   @org.kie.api.definition.type.Label("Korisnik koji unosi podatke")
+   private Korisnici id_korisnika;
 
    public Analiza()
    {
@@ -73,16 +73,6 @@ public class Analiza implements java.io.Serializable
       this.opis_uc = opis_uc;
    }
 
-   public java.lang.Long getId_zahtjeva()
-   {
-      return this.id_zahtjeva;
-   }
-
-   public void setId_zahtjeva(java.lang.Long id_zahtjeva)
-   {
-      this.id_zahtjeva = id_zahtjeva;
-   }
-
    public java.lang.String getNarucitelj()
    {
       return this.narucitelj;
@@ -93,20 +83,30 @@ public class Analiza implements java.io.Serializable
       this.narucitelj = narucitelj;
    }
 
-   public java.lang.Long getId_korisnika()
+   public vvgtest.ja.Analiza getId_zahtjeva()
+   {
+      return this.id_zahtjeva;
+   }
+
+   public void setId_zahtjeva(vvgtest.ja.Analiza id_zahtjeva)
+   {
+      this.id_zahtjeva = id_zahtjeva;
+   }
+
+   public vvgtest.ja.Korisnici getId_korisnika()
    {
       return this.id_korisnika;
    }
 
-   public void setId_korisnika(java.lang.Long id_korisnika)
+   public void setId_korisnika(vvgtest.ja.Korisnici id_korisnika)
    {
       this.id_korisnika = id_korisnika;
    }
 
    public Analiza(java.lang.Long id_analize, java.lang.String oznaka_UC,
          java.lang.String naziv_UC, java.lang.String opis_uc,
-         java.lang.Long id_zahtjeva, java.lang.String narucitelj,
-         java.lang.Long id_korisnika)
+         vvgtest.ja.Analiza id_zahtjeva, java.lang.String narucitelj,
+         vvgtest.ja.Korisnici id_korisnika)
    {
       this.id_analize = id_analize;
       this.oznaka_UC = oznaka_UC;
