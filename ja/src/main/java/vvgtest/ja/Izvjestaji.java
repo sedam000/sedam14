@@ -12,7 +12,7 @@ public class Izvjestaji implements java.io.Serializable
    @org.kie.api.definition.type.Label("IzjestajID")
    private java.lang.Long id_izvjestaja;
    @org.kie.api.definition.type.Label("ZahtjevID")
-   private java.lang.Long id_zahtjeva;
+   private Zahtjevi id_zahtjeva;
    @org.kie.api.definition.type.Label("TestnaSkriptaID")
    private Testne_sripte id_testne_skripte;
    @org.kie.api.definition.type.Label("naziv")
@@ -34,16 +34,6 @@ public class Izvjestaji implements java.io.Serializable
    public void setId_izvjestaja(java.lang.Long id_izvjestaja)
    {
       this.id_izvjestaja = id_izvjestaja;
-   }
-
-   public java.lang.Long getId_zahtjeva()
-   {
-      return this.id_zahtjeva;
-   }
-
-   public void setId_zahtjeva(java.lang.Long id_zahtjeva)
-   {
-      this.id_zahtjeva = id_zahtjeva;
    }
 
    public java.lang.String getNaziv()
@@ -86,7 +76,18 @@ public class Izvjestaji implements java.io.Serializable
       this.id_testne_skripte = id_testne_skripte;
    }
 
-   public Izvjestaji(java.lang.Long id_izvjestaja, java.lang.Long id_zahtjeva,
+   public vvgtest.ja.Zahtjevi getId_zahtjeva()
+   {
+      return this.id_zahtjeva;
+   }
+
+   public void setId_zahtjeva(vvgtest.ja.Zahtjevi id_zahtjeva)
+   {
+      this.id_zahtjeva = id_zahtjeva;
+   }
+
+   public Izvjestaji(java.lang.Long id_izvjestaja,
+         vvgtest.ja.Zahtjevi id_zahtjeva,
          vvgtest.ja.Testne_sripte id_testne_skripte, java.lang.String naziv,
          java.lang.String opis, vvgtest.ja.Korisnici id_korisnika)
    {
