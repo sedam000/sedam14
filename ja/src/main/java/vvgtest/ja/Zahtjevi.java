@@ -10,39 +10,29 @@ public class Zahtjevi implements java.io.Serializable
    static final long serialVersionUID = 1L;
 
    @org.kie.api.definition.type.Label("ZahtjevID")
-   private java.lang.Long id_zahtjeva;
+   private Zahtjevi id_zahtjeva;
    @org.kie.api.definition.type.Label("Naziv zahjeva")
    private java.lang.String naziv_zahtjeva;
    @org.kie.api.definition.type.Label("Kratki opis zahtjeva")
    private java.lang.String opis_zahtjeva;
 
    @org.kie.api.definition.type.Label("status zahtjeva")
-   private Long id_statusa;
+   private Statusi id_statusa;
 
    @org.kie.api.definition.type.Label("Opis poslovnih pravila")
    private java.lang.String korisnicka_specifikacija;
 
-   @org.kie.api.definition.type.Label(value = "Narucitelj")
+   @org.kie.api.definition.type.Label("Narucitelj")
    private java.lang.String narucitelj;
 
-   @org.kie.api.definition.type.Label(value = "kontakt_osoba")
+   @org.kie.api.definition.type.Label("kontakt_osoba")
    private java.lang.String kontakt_osoba;
 
-   @org.kie.api.definition.type.Label(value = "korisnik")
-   private java.lang.Long id_korisnika;
+   @org.kie.api.definition.type.Label("korisnik")
+   private Korisnici id_korisnika;
 
    public Zahtjevi()
    {
-   }
-
-   public java.lang.Long getId_zahtjeva()
-   {
-      return this.id_zahtjeva;
-   }
-
-   public void setId_zahtjeva(java.lang.Long id_zahtjeva)
-   {
-      this.id_zahtjeva = id_zahtjeva;
    }
 
    public java.lang.String getNaziv_zahtjeva()
@@ -86,16 +76,6 @@ public class Zahtjevi implements java.io.Serializable
       this.narucitelj = narucitelj;
    }
 
-   public java.lang.Long getId_statusa()
-   {
-      return this.id_statusa;
-   }
-
-   public void setId_statusa(java.lang.Long id_statusa)
-   {
-      this.id_statusa = id_statusa;
-   }
-
    public java.lang.String getKontakt_osoba()
    {
       return this.kontakt_osoba;
@@ -106,20 +86,41 @@ public class Zahtjevi implements java.io.Serializable
       this.kontakt_osoba = kontakt_osoba;
    }
 
-   public java.lang.Long getId_korisnika()
+   public vvgtest.ja.Zahtjevi getId_zahtjeva()
+   {
+      return this.id_zahtjeva;
+   }
+
+   public void setId_zahtjeva(vvgtest.ja.Zahtjevi id_zahtjeva)
+   {
+      this.id_zahtjeva = id_zahtjeva;
+   }
+
+   public vvgtest.ja.Statusi getId_statusa()
+   {
+      return this.id_statusa;
+   }
+
+   public void setId_statusa(vvgtest.ja.Statusi id_statusa)
+   {
+      this.id_statusa = id_statusa;
+   }
+
+   public vvgtest.ja.Korisnici getId_korisnika()
    {
       return this.id_korisnika;
    }
 
-   public void setId_korisnika(java.lang.Long id_korisnika)
+   public void setId_korisnika(vvgtest.ja.Korisnici id_korisnika)
    {
       this.id_korisnika = id_korisnika;
    }
 
-   public Zahtjevi(java.lang.Long id_zahtjeva, java.lang.String naziv_zahtjeva,
-         java.lang.String opis_zahtjeva, java.lang.Long id_statusa,
+   public Zahtjevi(vvgtest.ja.Zahtjevi id_zahtjeva,
+         java.lang.String naziv_zahtjeva, java.lang.String opis_zahtjeva,
+         vvgtest.ja.Statusi id_statusa,
          java.lang.String korisnicka_specifikacija, java.lang.String narucitelj,
-         java.lang.String kontakt_osoba, java.lang.Long id_korisnika)
+         java.lang.String kontakt_osoba, vvgtest.ja.Korisnici id_korisnika)
    {
       this.id_zahtjeva = id_zahtjeva;
       this.naziv_zahtjeva = naziv_zahtjeva;
