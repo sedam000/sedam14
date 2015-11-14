@@ -9,18 +9,18 @@ public class Izvjestaji implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "IzjestajID")
+   @org.kie.api.definition.type.Label("IzjestajID")
    private java.lang.Long id_izvjestaja;
-   @org.kie.api.definition.type.Label(value = "ZahtjevID")
+   @org.kie.api.definition.type.Label("ZahtjevID")
    private java.lang.Long id_zahtjeva;
-   @org.kie.api.definition.type.Label(value = "TestnaSkriptaID")
+   @org.kie.api.definition.type.Label("TestnaSkriptaID")
    private java.lang.Long id_testne_skripte;
-   @org.kie.api.definition.type.Label(value = "naziv")
+   @org.kie.api.definition.type.Label("naziv")
    private java.lang.String naziv;
-   @org.kie.api.definition.type.Label(value = "opis")
+   @org.kie.api.definition.type.Label("opis")
    private java.lang.String opis;
-   @org.kie.api.definition.type.Label(value = "korisnika")
-   private java.lang.Long id_korisnika;
+   @org.kie.api.definition.type.Label("korisnika")
+   private Korisnici id_korisnika;
 
    public Izvjestaji()
    {
@@ -76,19 +76,19 @@ public class Izvjestaji implements java.io.Serializable
       this.opis = opis;
    }
 
-   public java.lang.Long getId_korisnika()
+   public vvgtest.ja.Korisnici getId_korisnika()
    {
       return this.id_korisnika;
    }
 
-   public void setId_korisnika(java.lang.Long id_korisnika)
+   public void setId_korisnika(vvgtest.ja.Korisnici id_korisnika)
    {
       this.id_korisnika = id_korisnika;
    }
 
    public Izvjestaji(java.lang.Long id_izvjestaja, java.lang.Long id_zahtjeva,
          java.lang.Long id_testne_skripte, java.lang.String naziv,
-         java.lang.String opis, java.lang.Long id_korisnika)
+         java.lang.String opis, vvgtest.ja.Korisnici id_korisnika)
    {
       this.id_izvjestaja = id_izvjestaja;
       this.id_zahtjeva = id_zahtjeva;
