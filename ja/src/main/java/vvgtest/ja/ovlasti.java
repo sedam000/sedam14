@@ -9,10 +9,22 @@ public class ovlasti implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "ovlastID")
+   @org.kie.api.definition.type.Label("ovlastID")
    private java.lang.Integer id_ovlast;
-   @org.kie.api.definition.type.Label(value = "administrator")
+   @org.kie.api.definition.type.Label("administrator")
    private java.lang.String admin;
+
+   @org.kie.api.definition.type.Label(value = "narucitelj")
+   private java.lang.String narucitelj;
+
+   @org.kie.api.definition.type.Label(value = "analiticar")
+   private java.lang.String analiticar;
+
+   @org.kie.api.definition.type.Label(value = "tester")
+   private java.lang.String tester;
+
+   @org.kie.api.definition.type.Label(value = "programer")
+   private java.lang.String programer;
 
    public ovlasti()
    {
@@ -38,10 +50,56 @@ public class ovlasti implements java.io.Serializable
       this.admin = admin;
    }
 
-   public ovlasti(java.lang.Integer id_ovlast, java.lang.String admin)
+   public java.lang.String getNarucitelj()
+   {
+      return this.narucitelj;
+   }
+
+   public void setNarucitelj(java.lang.String narucitelj)
+   {
+      this.narucitelj = narucitelj;
+   }
+
+   public java.lang.String getAnaliticar()
+   {
+      return this.analiticar;
+   }
+
+   public void setAnaliticar(java.lang.String analiticar)
+   {
+      this.analiticar = analiticar;
+   }
+
+   public java.lang.String getTester()
+   {
+      return this.tester;
+   }
+
+   public void setTester(java.lang.String tester)
+   {
+      this.tester = tester;
+   }
+
+   public java.lang.String getProgramer()
+   {
+      return this.programer;
+   }
+
+   public void setProgramer(java.lang.String programer)
+   {
+      this.programer = programer;
+   }
+
+   public ovlasti(java.lang.Integer id_ovlast, java.lang.String admin,
+         java.lang.String narucitelj, java.lang.String analiticar,
+         java.lang.String tester, java.lang.String programer)
    {
       this.id_ovlast = id_ovlast;
       this.admin = admin;
+      this.narucitelj = narucitelj;
+      this.analiticar = analiticar;
+      this.tester = tester;
+      this.programer = programer;
    }
 
 }
