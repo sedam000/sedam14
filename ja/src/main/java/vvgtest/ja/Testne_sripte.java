@@ -10,7 +10,7 @@ public class Testne_sripte implements java.io.Serializable
    static final long serialVersionUID = 1L;
 
    @org.kie.api.definition.type.Label("TestnaSkriptaID")
-   private java.lang.Long id_testne_skripte;
+   private Testne_sripte id_testne_skripte;
    @org.kie.api.definition.type.Label("Testnikorak")
    private java.lang.Long testni_korak;
    @org.kie.api.definition.type.Label("Opis testnog koraka")
@@ -32,16 +32,6 @@ public class Testne_sripte implements java.io.Serializable
 
    public Testne_sripte()
    {
-   }
-
-   public java.lang.Long getId_testne_skripte()
-   {
-      return this.id_testne_skripte;
-   }
-
-   public void setId_testne_skripte(java.lang.Long id_testne_skripte)
-   {
-      this.id_testne_skripte = id_testne_skripte;
    }
 
    public java.lang.Long getTestni_korak()
@@ -125,7 +115,17 @@ public class Testne_sripte implements java.io.Serializable
       this.id_korisnika = id_korisnika;
    }
 
-   public Testne_sripte(java.lang.Long id_testne_skripte,
+   public vvgtest.ja.Testne_sripte getId_testne_skripte()
+   {
+      return this.id_testne_skripte;
+   }
+
+   public void setId_testne_skripte(vvgtest.ja.Testne_sripte id_testne_skripte)
+   {
+      this.id_testne_skripte = id_testne_skripte;
+   }
+
+   public Testne_sripte(vvgtest.ja.Testne_sripte id_testne_skripte,
          java.lang.Long testni_korak, java.lang.String opis_testnog_koraka,
          java.lang.String rezultat_testnog_koraka,
          java.lang.String sts_ispravnosti, java.lang.Long id_zahtjeva,
