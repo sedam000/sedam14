@@ -21,7 +21,7 @@ public class Analiza implements java.io.Serializable
    private java.lang.String opis_uc;
 
    @org.kie.api.definition.type.Label("ZahtjevID")
-   private Analiza id_zahtjeva;
+   private Zahtjevi id_zahtjeva;
 
    @org.kie.api.definition.type.Label("Narucitelj")
    private java.lang.String narucitelj;
@@ -83,16 +83,6 @@ public class Analiza implements java.io.Serializable
       this.narucitelj = narucitelj;
    }
 
-   public vvgtest.ja.Analiza getId_zahtjeva()
-   {
-      return this.id_zahtjeva;
-   }
-
-   public void setId_zahtjeva(vvgtest.ja.Analiza id_zahtjeva)
-   {
-      this.id_zahtjeva = id_zahtjeva;
-   }
-
    public vvgtest.ja.Korisnici getId_korisnika()
    {
       return this.id_korisnika;
@@ -103,9 +93,19 @@ public class Analiza implements java.io.Serializable
       this.id_korisnika = id_korisnika;
    }
 
+   public vvgtest.ja.Zahtjevi getId_zahtjeva()
+   {
+      return this.id_zahtjeva;
+   }
+
+   public void setId_zahtjeva(vvgtest.ja.Zahtjevi id_zahtjeva)
+   {
+      this.id_zahtjeva = id_zahtjeva;
+   }
+
    public Analiza(java.lang.Long id_analize, java.lang.String oznaka_UC,
          java.lang.String naziv_UC, java.lang.String opis_uc,
-         vvgtest.ja.Analiza id_zahtjeva, java.lang.String narucitelj,
+         vvgtest.ja.Zahtjevi id_zahtjeva, java.lang.String narucitelj,
          vvgtest.ja.Korisnici id_korisnika)
    {
       this.id_analize = id_analize;
