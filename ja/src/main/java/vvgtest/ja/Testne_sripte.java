@@ -21,14 +21,14 @@ public class Testne_sripte implements java.io.Serializable
    private java.lang.String sts_ispravnosti;
    @org.kie.api.definition.type.Label("ZahtjevID")
    private java.lang.Long id_zahtjeva;
-   @org.kie.api.definition.type.Label(value = "naruciteljID")
+   @org.kie.api.definition.type.Label("naruciteljID")
    private java.lang.String narucitelj;
 
-   @org.kie.api.definition.type.Label(value = "analizaID")
+   @org.kie.api.definition.type.Label("analizaID")
    private java.lang.Long id_analize;
 
-   @org.kie.api.definition.type.Label(value = "korisnik")
-   private java.lang.Long id_korisnika;
+   @org.kie.api.definition.type.Label("korisnik")
+   private Korisnici id_korisnika;
 
    public Testne_sripte()
    {
@@ -115,12 +115,12 @@ public class Testne_sripte implements java.io.Serializable
       this.id_analize = id_analize;
    }
 
-   public java.lang.Long getId_korisnika()
+   public vvgtest.ja.Korisnici getId_korisnika()
    {
       return this.id_korisnika;
    }
 
-   public void setId_korisnika(java.lang.Long id_korisnika)
+   public void setId_korisnika(vvgtest.ja.Korisnici id_korisnika)
    {
       this.id_korisnika = id_korisnika;
    }
@@ -130,7 +130,7 @@ public class Testne_sripte implements java.io.Serializable
          java.lang.String rezultat_testnog_koraka,
          java.lang.String sts_ispravnosti, java.lang.Long id_zahtjeva,
          java.lang.String narucitelj, java.lang.Long id_analize,
-         java.lang.Long id_korisnika)
+         vvgtest.ja.Korisnici id_korisnika)
    {
       this.id_testne_skripte = id_testne_skripte;
       this.testni_korak = testni_korak;
