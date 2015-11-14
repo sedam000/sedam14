@@ -9,23 +9,23 @@ public class Pogreske implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "PogreskaID")
+   @org.kie.api.definition.type.Label("PogreskaID")
    private java.lang.Long id_pogreske;
-   @org.kie.api.definition.type.Label(value = "naslov pogreske")
+   @org.kie.api.definition.type.Label("naslov pogreske")
    private java.lang.String naslov_pogreske;
-   @org.kie.api.definition.type.Label(value = "opis pogreske")
+   @org.kie.api.definition.type.Label("opis pogreske")
    private java.lang.String opis_pogreske;
-   @org.kie.api.definition.type.Label(value = "pogreska status")
-   private java.lang.Long id_sts_pogreske;
-   @org.kie.api.definition.type.Label(value = "programer,analiticar ")
+   @org.kie.api.definition.type.Label("pogreska status")
+   private Statusi_pogresaka id_sts_pogreske;
+   @org.kie.api.definition.type.Label("programer,analiticar ")
    private java.lang.String zaduzena_osoba;
-   @org.kie.api.definition.type.Label(value = "verzija")
+   @org.kie.api.definition.type.Label("verzija")
    private java.lang.String verzija_aplikacije;
-   @org.kie.api.definition.type.Label(value = "TestnaSkriptaID")
-   private java.lang.Long id_test_skripte;
-   @org.kie.api.definition.type.Label(value = "Testni korak")
+   @org.kie.api.definition.type.Label("TestnaSkriptaID")
+   private Testne_sripte id_test_skripte;
+   @org.kie.api.definition.type.Label("Testni korak")
    private java.lang.String testni_korak;
-   @org.kie.api.definition.type.Label(value = "obavijstiti")
+   @org.kie.api.definition.type.Label("obavijstiti")
    private java.lang.String obavijestit;
 
    public Pogreske()
@@ -62,16 +62,6 @@ public class Pogreske implements java.io.Serializable
       this.opis_pogreske = opis_pogreske;
    }
 
-   public java.lang.Long getId_sts_pogreske()
-   {
-      return this.id_sts_pogreske;
-   }
-
-   public void setId_sts_pogreske(java.lang.Long id_sts_pogreske)
-   {
-      this.id_sts_pogreske = id_sts_pogreske;
-   }
-
    public java.lang.String getZaduzena_osoba()
    {
       return this.zaduzena_osoba;
@@ -90,16 +80,6 @@ public class Pogreske implements java.io.Serializable
    public void setVerzija_aplikacije(java.lang.String verzija_aplikacije)
    {
       this.verzija_aplikacije = verzija_aplikacije;
-   }
-
-   public java.lang.Long getId_test_skripte()
-   {
-      return this.id_test_skripte;
-   }
-
-   public void setId_test_skripte(java.lang.Long id_test_skripte)
-   {
-      this.id_test_skripte = id_test_skripte;
    }
 
    public java.lang.String getTestni_korak()
@@ -122,12 +102,32 @@ public class Pogreske implements java.io.Serializable
       this.obavijestit = obavijestit;
    }
 
-   public Pogreske(java.lang.Long id_pogreske,
-         java.lang.String naslov_pogreske, java.lang.String opis_pogreske,
-         java.lang.Long id_sts_pogreske, java.lang.String zaduzena_osoba,
-         java.lang.String verzija_aplikacije,
-         java.lang.Long id_test_skripte, java.lang.String testni_korak,
-         java.lang.String obavijestit)
+   public vvgtest.ja.Statusi_pogresaka getId_sts_pogreske()
+   {
+      return this.id_sts_pogreske;
+   }
+
+   public void setId_sts_pogreske(vvgtest.ja.Statusi_pogresaka id_sts_pogreske)
+   {
+      this.id_sts_pogreske = id_sts_pogreske;
+   }
+
+   public vvgtest.ja.Testne_sripte getId_test_skripte()
+   {
+      return this.id_test_skripte;
+   }
+
+   public void setId_test_skripte(vvgtest.ja.Testne_sripte id_test_skripte)
+   {
+      this.id_test_skripte = id_test_skripte;
+   }
+
+   public Pogreske(java.lang.Long id_pogreske, java.lang.String naslov_pogreske,
+         java.lang.String opis_pogreske,
+         vvgtest.ja.Statusi_pogresaka id_sts_pogreske,
+         java.lang.String zaduzena_osoba, java.lang.String verzija_aplikacije,
+         vvgtest.ja.Testne_sripte id_test_skripte,
+         java.lang.String testni_korak, java.lang.String obavijestit)
    {
       this.id_pogreske = id_pogreske;
       this.naslov_pogreske = naslov_pogreske;
