@@ -30,7 +30,7 @@ public class Analiza implements java.io.Serializable
    private Korisnici id_korisnika;
 
    @org.kie.api.definition.type.Label(value = "status analize")
-   private vvgtest.ja.Statusi sts_analize;
+   private vvgtest.ja.Statusi id_statusa;
 
    public Analiza()
    {
@@ -106,20 +106,20 @@ public class Analiza implements java.io.Serializable
       this.id_zahtjeva = id_zahtjeva;
    }
 
-   public vvgtest.ja.Statusi getSts_analize()
+   public vvgtest.ja.Statusi getId_statusa()
    {
-      return this.sts_analize;
+      return this.id_statusa;
    }
 
-   public void setSts_analize(vvgtest.ja.Statusi sts_analize)
+   public void setId_statusa(vvgtest.ja.Statusi id_statusa)
    {
-      this.sts_analize = sts_analize;
+      this.id_statusa = id_statusa;
    }
 
    public Analiza(java.lang.Long id_analize, java.lang.String oznaka_UC,
          java.lang.String naziv_UC, java.lang.String opis_uc,
          vvgtest.ja.Zahtjevi id_zahtjeva, java.lang.String narucitelj,
-         vvgtest.ja.Korisnici id_korisnika, vvgtest.ja.Statusi sts_analize)
+         vvgtest.ja.Korisnici id_korisnika, vvgtest.ja.Statusi id_statusa)
    {
       this.id_analize = id_analize;
       this.oznaka_UC = oznaka_UC;
@@ -128,7 +128,7 @@ public class Analiza implements java.io.Serializable
       this.id_zahtjeva = id_zahtjeva;
       this.narucitelj = narucitelj;
       this.id_korisnika = id_korisnika;
-      this.sts_analize = sts_analize;
+      this.id_statusa = id_statusa;
    }
 
 }
