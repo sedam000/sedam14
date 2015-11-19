@@ -26,6 +26,9 @@ public class Korisnici implements java.io.Serializable
    @org.kie.api.definition.type.Label("ovlast_korisnika")
    private ovlasti id_ovlasti;
 
+   @org.kie.api.definition.type.Label(value = "aktivnost")
+   private java.lang.Boolean aktivnost;
+
    public Korisnici()
    {
    }
@@ -100,10 +103,20 @@ public class Korisnici implements java.io.Serializable
       this.id_ovlasti = id_ovlasti;
    }
 
+   public java.lang.Boolean getAktivnost()
+   {
+      return this.aktivnost;
+   }
+
+   public void setAktivnost(java.lang.Boolean aktivnost)
+   {
+      this.aktivnost = aktivnost;
+   }
+
    public Korisnici(java.lang.Long id_korisnika, java.lang.String ime_korisnik,
          java.lang.String prezime_korisnika, java.lang.String korisnicko_ime,
          java.lang.String lozinka, java.lang.Long mail_adresa,
-         vvgtest.ja.ovlasti id_ovlasti)
+         vvgtest.ja.ovlasti id_ovlasti, java.lang.Boolean aktivnost)
    {
       this.id_korisnika = id_korisnika;
       this.ime_korisnik = ime_korisnik;
@@ -112,6 +125,7 @@ public class Korisnici implements java.io.Serializable
       this.lozinka = lozinka;
       this.mail_adresa = mail_adresa;
       this.id_ovlasti = id_ovlasti;
+      this.aktivnost = aktivnost;
    }
 
 }
