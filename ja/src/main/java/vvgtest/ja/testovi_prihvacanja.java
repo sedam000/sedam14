@@ -29,7 +29,7 @@ public class testovi_prihvacanja implements java.io.Serializable
    private Korisnici id_korisnika;
 
    @org.kie.api.definition.type.Label(value = "status testa prihvacanja")
-   private vvgtest.ja.Statusi status_test_prih;
+   private vvgtest.ja.Statusi id_status;
 
    public testovi_prihvacanja()
    {
@@ -126,14 +126,14 @@ public class testovi_prihvacanja implements java.io.Serializable
       this.id_korisnika = id_korisnika;
    }
 
-   public vvgtest.ja.Statusi getStatus_test_prih()
+   public vvgtest.ja.Statusi getId_status()
    {
-      return this.status_test_prih;
+      return this.id_status;
    }
 
-   public void setStatus_test_prih(vvgtest.ja.Statusi status_test_prih)
+   public void setId_status(vvgtest.ja.Statusi id_status)
    {
-      this.status_test_prih = status_test_prih;
+      this.id_status = id_status;
    }
 
    public testovi_prihvacanja(vvgtest.ja.testovi_prihvacanja id_test_prih,
@@ -142,7 +142,7 @@ public class testovi_prihvacanja implements java.io.Serializable
          java.lang.String verzije_aplikacija, java.lang.String naziv_aplikacija,
          java.lang.String opis_testa_prihvacanja,
          vvgtest.ja.Izvjestaji id_izvjestaja, vvgtest.ja.Korisnici id_korisnika,
-         vvgtest.ja.Statusi status_test_prih)
+         vvgtest.ja.Statusi id_status)
    {
       this.id_test_prih = id_test_prih;
       this.id_testne_sripte = id_testne_sripte;
@@ -153,7 +153,7 @@ public class testovi_prihvacanja implements java.io.Serializable
       this.opis_testa_prihvacanja = opis_testa_prihvacanja;
       this.id_izvjestaja = id_izvjestaja;
       this.id_korisnika = id_korisnika;
-      this.status_test_prih = status_test_prih;
+      this.id_status = id_status;
    }
 
 }
