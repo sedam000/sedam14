@@ -9,7 +9,7 @@ public class testovi_prihvacanja implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label("testPrihva?anjaID")
+   @org.kie.api.definition.type.Label("testPrihvacanjaID")
    private testovi_prihvacanja id_test_prih;
    @org.kie.api.definition.type.Label("TestnaSkriptaID")
    private Testne_sripte id_testne_sripte;
