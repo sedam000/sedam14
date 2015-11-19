@@ -30,7 +30,7 @@ public class Analiza implements java.io.Serializable
    private Korisnici id_korisnika;
 
    @org.kie.api.definition.type.Label(value = "status analize")
-   private vvgtest.ja.Statusi id_statusa;
+   private vvgtest.ja.Statusi id_status;
 
    public Analiza()
    {
@@ -106,20 +106,20 @@ public class Analiza implements java.io.Serializable
       this.id_zahtjeva = id_zahtjeva;
    }
 
-   public vvgtest.ja.Statusi getId_statusa()
+   public vvgtest.ja.Statusi getId_status()
    {
-      return this.id_statusa;
+      return this.id_status;
    }
 
-   public void setId_statusa(vvgtest.ja.Statusi id_statusa)
+   public void setId_status(vvgtest.ja.Statusi id_status)
    {
-      this.id_statusa = id_statusa;
+      this.id_status = id_status;
    }
 
    public Analiza(java.lang.Long id_analize, java.lang.String oznaka_UC,
          java.lang.String naziv_UC, java.lang.String opis_uc,
          vvgtest.ja.Zahtjevi id_zahtjeva, java.lang.String narucitelj,
-         vvgtest.ja.Korisnici id_korisnika, vvgtest.ja.Statusi id_statusa)
+         vvgtest.ja.Korisnici id_korisnika, vvgtest.ja.Statusi id_status)
    {
       this.id_analize = id_analize;
       this.oznaka_UC = oznaka_UC;
@@ -128,7 +128,7 @@ public class Analiza implements java.io.Serializable
       this.id_zahtjeva = id_zahtjeva;
       this.narucitelj = narucitelj;
       this.id_korisnika = id_korisnika;
-      this.id_statusa = id_statusa;
+      this.id_status = id_status;
    }
 
 }
