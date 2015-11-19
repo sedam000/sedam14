@@ -15,7 +15,7 @@ public class testovi_prihvacanja implements java.io.Serializable
    private Testne_sripte id_testne_sripte;
    @org.kie.api.definition.type.Label("ZahtjevID")
    private Zahtjevi id_zahtjeva;
-   @org.kie.api.definition.type.Label("naziv testa prihva?anja")
+   @org.kie.api.definition.type.Label("naziv testa prihvacanja")
    private java.lang.String naziv;
    @org.kie.api.definition.type.Label("stabilna verzija aplikacija")
    private java.lang.String verzije_aplikacija;
