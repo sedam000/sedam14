@@ -16,9 +16,6 @@ public class Zahtjevi implements java.io.Serializable
    @org.kie.api.definition.type.Label("Kratki opis zahtjeva")
    private java.lang.String opis_zahtjeva;
 
-   @org.kie.api.definition.type.Label("status zahtjeva")
-   private Statusi id_statusa;
-
    @org.kie.api.definition.type.Label("Opis poslovnih pravila")
    private java.lang.String korisnicka_specifikacija;
 
@@ -30,6 +27,9 @@ public class Zahtjevi implements java.io.Serializable
 
    @org.kie.api.definition.type.Label("korisnik")
    private Korisnici id_korisnika;
+
+   @org.kie.api.definition.type.Label(value = "status zahtjeva")
+   private vvgtest.ja.Statusi id_status;
 
    public Zahtjevi()
    {
@@ -96,16 +96,6 @@ public class Zahtjevi implements java.io.Serializable
       this.id_zahtjeva = id_zahtjeva;
    }
 
-   public vvgtest.ja.Statusi getId_statusa()
-   {
-      return this.id_statusa;
-   }
-
-   public void setId_statusa(vvgtest.ja.Statusi id_statusa)
-   {
-      this.id_statusa = id_statusa;
-   }
-
    public vvgtest.ja.Korisnici getId_korisnika()
    {
       return this.id_korisnika;
@@ -116,20 +106,30 @@ public class Zahtjevi implements java.io.Serializable
       this.id_korisnika = id_korisnika;
    }
 
+   public vvgtest.ja.Statusi getId_status()
+   {
+      return this.id_status;
+   }
+
+   public void setId_status(vvgtest.ja.Statusi id_status)
+   {
+      this.id_status = id_status;
+   }
+
    public Zahtjevi(vvgtest.ja.Zahtjevi id_zahtjeva,
          java.lang.String naziv_zahtjeva, java.lang.String opis_zahtjeva,
-         vvgtest.ja.Statusi id_statusa,
          java.lang.String korisnicka_specifikacija, java.lang.String narucitelj,
-         java.lang.String kontakt_osoba, vvgtest.ja.Korisnici id_korisnika)
+         java.lang.String kontakt_osoba, vvgtest.ja.Korisnici id_korisnika,
+         vvgtest.ja.Statusi id_status)
    {
       this.id_zahtjeva = id_zahtjeva;
       this.naziv_zahtjeva = naziv_zahtjeva;
       this.opis_zahtjeva = opis_zahtjeva;
-      this.id_statusa = id_statusa;
       this.korisnicka_specifikacija = korisnicka_specifikacija;
       this.narucitelj = narucitelj;
       this.kontakt_osoba = kontakt_osoba;
       this.id_korisnika = id_korisnika;
+      this.id_status = id_status;
    }
 
 }
