@@ -25,8 +25,8 @@ public class Pogreske implements java.io.Serializable
    private Testne_sripte id_test_skripte;
    @org.kie.api.definition.type.Label("Testni korak")
    private java.lang.String testni_korak;
-   @org.kie.api.definition.type.Label("obavijstiti")
-   private java.lang.String obavijestit;
+   @org.kie.api.definition.type.Label(value = "obavijstiti")
+   private java.lang.String obavijestiti;
 
    public Pogreske()
    {
@@ -92,16 +92,6 @@ public class Pogreske implements java.io.Serializable
       this.testni_korak = testni_korak;
    }
 
-   public java.lang.String getObavijestit()
-   {
-      return this.obavijestit;
-   }
-
-   public void setObavijestit(java.lang.String obavijestit)
-   {
-      this.obavijestit = obavijestit;
-   }
-
    public vvgtest.ja.Statusi_pogresaka getId_sts_pogreske()
    {
       return this.id_sts_pogreske;
@@ -122,12 +112,22 @@ public class Pogreske implements java.io.Serializable
       this.id_test_skripte = id_test_skripte;
    }
 
+   public java.lang.String getObavijestiti()
+   {
+      return this.obavijestiti;
+   }
+
+   public void setObavijestiti(java.lang.String obavijestiti)
+   {
+      this.obavijestiti = obavijestiti;
+   }
+
    public Pogreske(java.lang.Long id_pogreske, java.lang.String naslov_pogreske,
          java.lang.String opis_pogreske,
          vvgtest.ja.Statusi_pogresaka id_sts_pogreske,
          java.lang.String zaduzena_osoba, java.lang.String verzija_aplikacije,
          vvgtest.ja.Testne_sripte id_test_skripte,
-         java.lang.String testni_korak, java.lang.String obavijestit)
+         java.lang.String testni_korak, java.lang.String obavijestiti)
    {
       this.id_pogreske = id_pogreske;
       this.naslov_pogreske = naslov_pogreske;
@@ -137,7 +137,7 @@ public class Pogreske implements java.io.Serializable
       this.verzija_aplikacije = verzija_aplikacije;
       this.id_test_skripte = id_test_skripte;
       this.testni_korak = testni_korak;
-      this.obavijestit = obavijestit;
+      this.obavijestiti = obavijestiti;
    }
 
 }
