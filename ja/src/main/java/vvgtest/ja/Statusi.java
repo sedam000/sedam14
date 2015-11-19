@@ -21,11 +21,14 @@ public class Statusi implements java.io.Serializable
    @org.kie.api.definition.type.Label("Produkcija")
    private java.lang.String produkcija;
 
-   @org.kie.api.definition.type.Label(value = "U programiranju")
+   @org.kie.api.definition.type.Label("U programiranju")
    private java.lang.String u_obradi;
 
-   @org.kie.api.definition.type.Label(value = "zavrseno")
+   @org.kie.api.definition.type.Label("zavrseno")
    private java.lang.String zavrseno;
+
+   @org.kie.api.definition.type.Label(value = "u pripremi testna skripta")
+   private vvgtest.ja.Statusi preuzeto;
 
    public Statusi()
    {
@@ -101,10 +104,20 @@ public class Statusi implements java.io.Serializable
       this.zavrseno = zavrseno;
    }
 
+   public vvgtest.ja.Statusi getPreuzeto()
+   {
+      return this.preuzeto;
+   }
+
+   public void setPreuzeto(vvgtest.ja.Statusi preuzeto)
+   {
+      this.preuzeto = preuzeto;
+   }
+
    public Statusi(java.lang.Long id_statusa, java.lang.String programiranje,
          java.lang.String u_testiranju, java.lang.String analiza,
          java.lang.String produkcija, java.lang.String u_obradi,
-         java.lang.String zavrseno)
+         java.lang.String zavrseno, vvgtest.ja.Statusi preuzeto)
    {
       this.id_statusa = id_statusa;
       this.programiranje = programiranje;
@@ -113,6 +126,7 @@ public class Statusi implements java.io.Serializable
       this.produkcija = produkcija;
       this.u_obradi = u_obradi;
       this.zavrseno = zavrseno;
+      this.preuzeto = preuzeto;
    }
 
 }
