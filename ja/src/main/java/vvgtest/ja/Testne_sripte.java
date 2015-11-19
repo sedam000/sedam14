@@ -9,8 +9,6 @@ public class Testne_sripte implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label("TestnaSkriptaID")
-   private Testne_sripte id_testne_skripte;
    @org.kie.api.definition.type.Label("Testnikorak")
    private java.lang.Long testni_korak;
    @org.kie.api.definition.type.Label("Opis testnog koraka")
@@ -29,6 +27,12 @@ public class Testne_sripte implements java.io.Serializable
 
    @org.kie.api.definition.type.Label("korisnik")
    private Korisnici id_korisnika;
+
+   @org.kie.api.definition.type.Label(value = "testnaskriptaID")
+   private java.lang.Long id_test_skripte;
+
+   @org.kie.api.definition.type.Label(value = "u kojem je statusu")
+   private vvgtest.ja.Statusi id_statusa;
 
    public Testne_sripte()
    {
@@ -115,24 +119,34 @@ public class Testne_sripte implements java.io.Serializable
       this.id_analize = id_analize;
    }
 
-   public vvgtest.ja.Testne_sripte getId_testne_skripte()
+   public java.lang.Long getId_test_skripte()
    {
-      return this.id_testne_skripte;
+      return this.id_test_skripte;
    }
 
-   public void setId_testne_skripte(vvgtest.ja.Testne_sripte id_testne_skripte)
+   public void setId_test_skripte(java.lang.Long id_test_skripte)
    {
-      this.id_testne_skripte = id_testne_skripte;
+      this.id_test_skripte = id_test_skripte;
    }
 
-   public Testne_sripte(vvgtest.ja.Testne_sripte id_testne_skripte,
-         java.lang.Long testni_korak, java.lang.String opis_testnog_koraka,
+   public vvgtest.ja.Statusi getId_statusa()
+   {
+      return this.id_statusa;
+   }
+
+   public void setId_statusa(vvgtest.ja.Statusi id_statusa)
+   {
+      this.id_statusa = id_statusa;
+   }
+
+   public Testne_sripte(java.lang.Long testni_korak,
+         java.lang.String opis_testnog_koraka,
          java.lang.String rezultat_testnog_koraka,
          java.lang.String sts_ispravnosti, vvgtest.ja.Zahtjevi id_zahtjeva,
          java.lang.String narucitelj, vvgtest.ja.Analiza id_analize,
-         vvgtest.ja.Korisnici id_korisnika)
+         vvgtest.ja.Korisnici id_korisnika, java.lang.Long id_test_skripte,
+         vvgtest.ja.Statusi id_statusa)
    {
-      this.id_testne_skripte = id_testne_skripte;
       this.testni_korak = testni_korak;
       this.opis_testnog_koraka = opis_testnog_koraka;
       this.rezultat_testnog_koraka = rezultat_testnog_koraka;
@@ -141,6 +155,8 @@ public class Testne_sripte implements java.io.Serializable
       this.narucitelj = narucitelj;
       this.id_analize = id_analize;
       this.id_korisnika = id_korisnika;
+      this.id_test_skripte = id_test_skripte;
+      this.id_statusa = id_statusa;
    }
 
 }
