@@ -31,8 +31,11 @@ public class Testne_sripte implements java.io.Serializable
    @org.kie.api.definition.type.Label("testnaskriptaID")
    private java.lang.Long id_test_skripte;
 
-   @org.kie.api.definition.type.Label(value = "u kojem je statusu")
+   @org.kie.api.definition.type.Label("u kojem je statusu")
    private vvgtest.ja.Statusi id_status;
+
+   @org.kie.api.definition.type.Label(value = "naziv testne skripte")
+   private java.lang.String naziv_testne_skripte;
 
    public Testne_sripte()
    {
@@ -139,13 +142,23 @@ public class Testne_sripte implements java.io.Serializable
       this.id_status = id_status;
    }
 
+   public java.lang.String getNaziv_testne_skripte()
+   {
+      return this.naziv_testne_skripte;
+   }
+
+   public void setNaziv_testne_skripte(java.lang.String naziv_testne_skripte)
+   {
+      this.naziv_testne_skripte = naziv_testne_skripte;
+   }
+
    public Testne_sripte(java.lang.Long testni_korak,
          java.lang.String opis_testnog_koraka,
          java.lang.String rezultat_testnog_koraka,
          java.lang.String sts_ispravnosti, vvgtest.ja.Zahtjevi id_zahtjeva,
          java.lang.String narucitelj, vvgtest.ja.Analiza id_analize,
          vvgtest.ja.Korisnici id_korisnika, java.lang.Long id_test_skripte,
-         vvgtest.ja.Statusi id_status)
+         vvgtest.ja.Statusi id_status, java.lang.String naziv_testne_skripte)
    {
       this.testni_korak = testni_korak;
       this.opis_testnog_koraka = opis_testnog_koraka;
@@ -157,6 +170,7 @@ public class Testne_sripte implements java.io.Serializable
       this.id_korisnika = id_korisnika;
       this.id_test_skripte = id_test_skripte;
       this.id_status = id_status;
+      this.naziv_testne_skripte = naziv_testne_skripte;
    }
 
 }
