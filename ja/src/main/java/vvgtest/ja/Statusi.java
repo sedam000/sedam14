@@ -27,8 +27,8 @@ public class Statusi implements java.io.Serializable
    @org.kie.api.definition.type.Label("zavrseno")
    private java.lang.String zavrseno;
 
-   @org.kie.api.definition.type.Label(value = "u pripremi testna skripta")
-   private vvgtest.ja.Statusi preuzeto;
+   @org.kie.api.definition.type.Label("u pripremi testna skripta")
+   private String preuzeto;
 
    public Statusi()
    {
@@ -104,12 +104,12 @@ public class Statusi implements java.io.Serializable
       this.zavrseno = zavrseno;
    }
 
-   public vvgtest.ja.Statusi getPreuzeto()
+   public java.lang.String getPreuzeto()
    {
       return this.preuzeto;
    }
 
-   public void setPreuzeto(vvgtest.ja.Statusi preuzeto)
+   public void setPreuzeto(java.lang.String preuzeto)
    {
       this.preuzeto = preuzeto;
    }
@@ -117,7 +117,7 @@ public class Statusi implements java.io.Serializable
    public Statusi(java.lang.Long id_statusa, java.lang.String programiranje,
          java.lang.String u_testiranju, java.lang.String analiza,
          java.lang.String produkcija, java.lang.String u_obradi,
-         java.lang.String zavrseno, vvgtest.ja.Statusi preuzeto)
+         java.lang.String zavrseno, java.lang.String preuzeto)
    {
       this.id_statusa = id_statusa;
       this.programiranje = programiranje;
