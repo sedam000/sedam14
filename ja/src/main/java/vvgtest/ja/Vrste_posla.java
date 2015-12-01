@@ -9,18 +9,18 @@ public class Vrste_posla implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "Vrsta posla")
+   @org.kie.api.definition.type.Label("Vrsta posla")
    private java.lang.Integer id_vrste_posla;
-   @org.kie.api.definition.type.Label(value = "Zahtjevi")
+   @org.kie.api.definition.type.Label("Zahtjevi")
    private java.lang.String zahtjevi;
-   @org.kie.api.definition.type.Label(value = "Analiza")
+   @org.kie.api.definition.type.Label("Analiza")
    private java.lang.String analiza;
-   @org.kie.api.definition.type.Label(value = "Testiranje")
+   @org.kie.api.definition.type.Label("Testiranje")
    private java.lang.String testiranje;
-   @org.kie.api.definition.type.Label(value = "Programiranje")
+   @org.kie.api.definition.type.Label("Programiranje")
    private java.lang.String programiranje;
-   @org.kie.api.definition.type.Label(value = "Odabrano")
-   private boolean odabrano;
+   @org.kie.api.definition.type.Label(value = "Odabir")
+   private boolean odabir;
 
    public Vrste_posla()
    {
@@ -76,27 +76,26 @@ public class Vrste_posla implements java.io.Serializable
       this.programiranje = programiranje;
    }
 
-   public boolean isOdabrano()
+   public boolean isOdabir()
    {
-      return this.odabrano;
+      return this.odabir;
    }
 
-   public void setOdabrano(boolean odabrano)
+   public void setOdabir(boolean odabir)
    {
-      this.odabrano = odabrano;
+      this.odabir = odabir;
    }
 
-   public Vrste_posla(java.lang.Integer id_vrste_posla,
-         java.lang.String zahtjevi, java.lang.String analiza,
-         java.lang.String testiranje, java.lang.String programiranje,
-         boolean odabrano)
+   public Vrste_posla(java.lang.Integer id_vrste_posla, java.lang.String zahtjevi,
+         java.lang.String analiza, java.lang.String testiranje,
+         java.lang.String programiranje, boolean odabir)
    {
       this.id_vrste_posla = id_vrste_posla;
       this.zahtjevi = zahtjevi;
       this.analiza = analiza;
       this.testiranje = testiranje;
       this.programiranje = programiranje;
-      this.odabrano = odabrano;
+      this.odabir = odabir;
    }
 
 }
