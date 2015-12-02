@@ -30,6 +30,8 @@ public class Statusi implements java.io.Serializable
    @org.kie.api.definition.type.Label("u pripremi testna skripta")
    private String preuzeto;
 
+   private java.lang.Integer id_status;
+
    public Statusi()
    {
    }
@@ -114,10 +116,21 @@ public class Statusi implements java.io.Serializable
       this.preuzeto = preuzeto;
    }
 
+   public java.lang.Integer getId_status()
+   {
+      return this.id_status;
+   }
+
+   public void setId_status(java.lang.Integer id_status)
+   {
+      this.id_status = id_status;
+   }
+
    public Statusi(java.lang.Long id_statusa, java.lang.String programiranje,
          java.lang.String u_testiranju, java.lang.String analiza,
          java.lang.String produkcija, java.lang.String u_obradi,
-         java.lang.String zavrseno, java.lang.String preuzeto)
+         java.lang.String zavrseno, java.lang.String preuzeto,
+         java.lang.Integer id_status)
    {
       this.id_statusa = id_statusa;
       this.programiranje = programiranje;
@@ -127,6 +140,7 @@ public class Statusi implements java.io.Serializable
       this.u_obradi = u_obradi;
       this.zavrseno = zavrseno;
       this.preuzeto = preuzeto;
+      this.id_status = id_status;
    }
 
 }
