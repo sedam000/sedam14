@@ -34,8 +34,11 @@ public class Testne_sripte implements java.io.Serializable
    @org.kie.api.definition.type.Label("u kojem je statusu")
    private vvgtest.ja.Statusi id_status;
 
-   @org.kie.api.definition.type.Label(value = "naziv testne skripte")
+   @org.kie.api.definition.type.Label("naziv testne skripte")
    private java.lang.String naziv_testne_skripte;
+
+   @org.kie.api.definition.type.Label(value = "analiza preuzeta")
+   private java.lang.String preuzeta_analiza;
 
    public Testne_sripte()
    {
@@ -152,13 +155,24 @@ public class Testne_sripte implements java.io.Serializable
       this.naziv_testne_skripte = naziv_testne_skripte;
    }
 
+   public java.lang.String getPreuzeta_analiza()
+   {
+      return this.preuzeta_analiza;
+   }
+
+   public void setPreuzeta_analiza(java.lang.String preuzeta_analiza)
+   {
+      this.preuzeta_analiza = preuzeta_analiza;
+   }
+
    public Testne_sripte(java.lang.Long testni_korak,
          java.lang.String opis_testnog_koraka,
          java.lang.String rezultat_testnog_koraka,
          java.lang.String sts_ispravnosti, vvgtest.ja.Zahtjevi id_zahtjeva,
          java.lang.String narucitelj, vvgtest.ja.Analiza id_analize,
          vvgtest.ja.Korisnici id_korisnika, java.lang.Long id_test_skripte,
-         vvgtest.ja.Statusi id_status, java.lang.String naziv_testne_skripte)
+         vvgtest.ja.Statusi id_status, java.lang.String naziv_testne_skripte,
+         java.lang.String preuzeta_analiza)
    {
       this.testni_korak = testni_korak;
       this.opis_testnog_koraka = opis_testnog_koraka;
@@ -171,6 +185,7 @@ public class Testne_sripte implements java.io.Serializable
       this.id_test_skripte = id_test_skripte;
       this.id_status = id_status;
       this.naziv_testne_skripte = naziv_testne_skripte;
+      this.preuzeta_analiza = preuzeta_analiza;
    }
 
 }
