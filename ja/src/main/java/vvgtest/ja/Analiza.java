@@ -29,8 +29,11 @@ public class Analiza implements java.io.Serializable
    @org.kie.api.definition.type.Label("Korisnik koji unosi podatke")
    private Korisnici id_korisnika;
 
-   @org.kie.api.definition.type.Label(value = "status analize")
+   @org.kie.api.definition.type.Label("status analize")
    private vvgtest.ja.Statusi id_status;
+
+   @org.kie.api.definition.type.Label(value = "Preuzimanje zahtjeva")
+   private java.lang.Boolean zahtjev_preuzet;
 
    public Analiza()
    {
@@ -116,10 +119,21 @@ public class Analiza implements java.io.Serializable
       this.id_status = id_status;
    }
 
+   public java.lang.Boolean getZahtjev_preuzet()
+   {
+      return this.zahtjev_preuzet;
+   }
+
+   public void setZahtjev_preuzet(java.lang.Boolean zahtjev_preuzet)
+   {
+      this.zahtjev_preuzet = zahtjev_preuzet;
+   }
+
    public Analiza(java.lang.Long id_analize, java.lang.String oznaka_UC,
          java.lang.String naziv_UC, java.lang.String opis_uc,
          vvgtest.ja.Zahtjevi id_zahtjeva, java.lang.String narucitelj,
-         vvgtest.ja.Korisnici id_korisnika, vvgtest.ja.Statusi id_status)
+         vvgtest.ja.Korisnici id_korisnika, vvgtest.ja.Statusi id_status,
+         java.lang.Boolean zahtjev_preuzet)
    {
       this.id_analize = id_analize;
       this.oznaka_UC = oznaka_UC;
@@ -129,6 +143,7 @@ public class Analiza implements java.io.Serializable
       this.narucitelj = narucitelj;
       this.id_korisnika = id_korisnika;
       this.id_status = id_status;
+      this.zahtjev_preuzet = zahtjev_preuzet;
    }
 
 }
