@@ -17,7 +17,7 @@ public class Pogreske implements java.io.Serializable
    private java.lang.String opis_pogreske;
    @org.kie.api.definition.type.Label("pogreska status")
    private Statusi_pogresaka id_sts_pogreske;
-   @org.kie.api.definition.type.Label("programer,analiticar ")
+   @org.kie.api.definition.type.Label("programer_analiticar")
    private java.lang.String zaduzena_osoba;
    @org.kie.api.definition.type.Label("verzija")
    private java.lang.String verzija_aplikacije;
@@ -25,7 +25,7 @@ public class Pogreske implements java.io.Serializable
    private Testne_sripte id_test_skripte;
    @org.kie.api.definition.type.Label("Testni korak")
    private java.lang.String testni_korak;
-   @org.kie.api.definition.type.Label(value = "obavijstiti")
+   @org.kie.api.definition.type.Label("obavijstiti")
    private java.lang.String obavijestiti;
 
    public Pogreske()
