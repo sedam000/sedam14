@@ -28,8 +28,12 @@ public class testovi_prihvacanja implements java.io.Serializable
    @org.kie.api.definition.type.Label("korisnik")
    private Korisnici id_korisnika;
 
-   @org.kie.api.definition.type.Label(value = "status testa prihvacanja")
+   @org.kie.api.definition.type.Label("status testa prihvacanja")
    private vvgtest.ja.Statusi id_status;
+
+   private java.lang.String poslati_obavijest;
+
+   private java.util.Date datum;
 
    public testovi_prihvacanja()
    {
@@ -136,13 +140,34 @@ public class testovi_prihvacanja implements java.io.Serializable
       this.id_status = id_status;
    }
 
+   public java.lang.String getPoslati_obavijest()
+   {
+      return this.poslati_obavijest;
+   }
+
+   public void setPoslati_obavijest(java.lang.String poslati_obavijest)
+   {
+      this.poslati_obavijest = poslati_obavijest;
+   }
+
+   public java.util.Date getDatum()
+   {
+      return this.datum;
+   }
+
+   public void setDatum(java.util.Date datum)
+   {
+      this.datum = datum;
+   }
+
    public testovi_prihvacanja(vvgtest.ja.testovi_prihvacanja id_test_prih,
          vvgtest.ja.Testne_sripte id_testne_sripte,
          vvgtest.ja.Zahtjevi id_zahtjeva, java.lang.String naziv,
          java.lang.String verzije_aplikacija, java.lang.String naziv_aplikacija,
          java.lang.String opis_testa_prihvacanja,
          vvgtest.ja.Izvjestaji id_izvjestaja, vvgtest.ja.Korisnici id_korisnika,
-         vvgtest.ja.Statusi id_status)
+         vvgtest.ja.Statusi id_status, java.lang.String poslati_obavijest,
+         java.util.Date datum)
    {
       this.id_test_prih = id_test_prih;
       this.id_testne_sripte = id_testne_sripte;
@@ -154,6 +179,8 @@ public class testovi_prihvacanja implements java.io.Serializable
       this.id_izvjestaja = id_izvjestaja;
       this.id_korisnika = id_korisnika;
       this.id_status = id_status;
+      this.poslati_obavijest = poslati_obavijest;
+      this.datum = datum;
    }
 
 }
