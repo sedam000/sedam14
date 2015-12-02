@@ -25,7 +25,7 @@ public class Pogreske implements java.io.Serializable
    private Testne_sripte id_test_skripte;
    @org.kie.api.definition.type.Label("Testni korak")
    private java.lang.String testni_korak;
-   @org.kie.api.definition.type.Label("obavijstiti")
+   @org.kie.api.definition.type.Label("Poslati obavijest")
    private java.lang.String obavijestiti;
 
    public Pogreske()
