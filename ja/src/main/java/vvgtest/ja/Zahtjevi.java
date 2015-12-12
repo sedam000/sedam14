@@ -10,7 +10,7 @@ public class Zahtjevi implements java.io.Serializable
    static final long serialVersionUID = 1L;
 
    @org.kie.api.definition.type.Label("ZahtjevID")
-   private Zahtjevi id_zahtjeva;
+   private Long id_zahtjeva;
    @org.kie.api.definition.type.Label("Naziv zahjeva")
    private java.lang.String naziv_zahtjeva;
    @org.kie.api.definition.type.Label("Kratki opis zahtjeva")
@@ -28,7 +28,7 @@ public class Zahtjevi implements java.io.Serializable
    @org.kie.api.definition.type.Label("korisnik")
    private Korisnici id_korisnika;
 
-   @org.kie.api.definition.type.Label(value = "status zahtjeva")
+   @org.kie.api.definition.type.Label("status zahtjeva")
    private vvgtest.ja.Statusi id_status;
 
    public Zahtjevi()
@@ -86,16 +86,6 @@ public class Zahtjevi implements java.io.Serializable
       this.kontakt_osoba = kontakt_osoba;
    }
 
-   public vvgtest.ja.Zahtjevi getId_zahtjeva()
-   {
-      return this.id_zahtjeva;
-   }
-
-   public void setId_zahtjeva(vvgtest.ja.Zahtjevi id_zahtjeva)
-   {
-      this.id_zahtjeva = id_zahtjeva;
-   }
-
    public vvgtest.ja.Korisnici getId_korisnika()
    {
       return this.id_korisnika;
@@ -116,8 +106,18 @@ public class Zahtjevi implements java.io.Serializable
       this.id_status = id_status;
    }
 
-   public Zahtjevi(vvgtest.ja.Zahtjevi id_zahtjeva,
-         java.lang.String naziv_zahtjeva, java.lang.String opis_zahtjeva,
+   public java.lang.Long getId_zahtjeva()
+   {
+      return this.id_zahtjeva;
+   }
+
+   public void setId_zahtjeva(java.lang.Long id_zahtjeva)
+   {
+      this.id_zahtjeva = id_zahtjeva;
+   }
+
+   public Zahtjevi(java.lang.Long id_zahtjeva, java.lang.String naziv_zahtjeva,
+         java.lang.String opis_zahtjeva,
          java.lang.String korisnicka_specifikacija, java.lang.String narucitelj,
          java.lang.String kontakt_osoba, vvgtest.ja.Korisnici id_korisnika,
          vvgtest.ja.Statusi id_status)
