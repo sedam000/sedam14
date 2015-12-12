@@ -1,5 +1,12 @@
 <kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <kbase name="mykbase" default="true" eventProcessingMode="stream" equalsBehavior="identity">
-    <ksession name="myksession" type="stateful" default="true" clockType="realtime"/>
+    <ksession name="myksession" type="stateful" default="true" clockType="realtime">
+      <workItemHandlers>
+        <workItemHandler type="provKorisnikaWorkItem.ProvjeraKorisnikaWorkItemHandler" name="ProvjeraKorisnikaWorkItemHandler"/>
+        <workItemHandler type="azururanjestsWorkItem.AzuriranjeStatusaWorkItemHandle" name="AzuriranjeStatusaWorkItemHandle"/>
+        <workItemHandler type="slanjeObavijWorkItem.SlanjeObavijestiWorkItemHandler" name="SlanjeObavijestiWorkItemHandler"/>
+        <workItemHandler type="signalZaProdWorkItem.SignalizacijaZaProdWorkItemHandler" name="SignalizacijaZaProdWorkItemHandler"/>
+      </workItemHandlers>
+    </ksession>
   </kbase>
 </kmodule>
